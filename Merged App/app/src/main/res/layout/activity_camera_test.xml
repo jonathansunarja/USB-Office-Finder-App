@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team23.officefinder.CameraTestActivity"
+    android:padding="23dp">
+
+    <SurfaceView
+        android:id="@+id/cameraView"
+        android:layout_width="381dp"
+        android:layout_height="368dp"
+        android:background="@drawable/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="324dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="9dp"
+        android:text="-"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cameraView" />
+
+    <Button
+        android:id="@+id/btnAccept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="accept"
+        android:text="ACCEPT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult" />
+</android.support.constraint.ConstraintLayout>

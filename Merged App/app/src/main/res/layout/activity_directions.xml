@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="team23.officefinder.DirectionsActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="104sp"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="72sp"
+                android:background="@color/colorAccent">
+
+                <TextView
+                    android:id="@+id/roomNumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.021"
+                    android:textSize="38sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/roomNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/roomNumText"
+                    android:layout_toRightOf="@+id/roomNumText"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="24dp"
+                    android:paddingTop="4dp"
+                    android:text="Group Study Area I"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:background="@color/colorAccentLight"
+                android:id="@+id/relativeLayout">
+
+                <Switch
+                    android:id="@+id/toggleSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text=""
+                    android:onClick="toggleTakeLift"/>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/toggleSwitch"
+                    android:layout_alignTop="@+id/toggleSwitch"
+                    android:layout_toRightOf="@+id/toggleSwitch"
+                    app:srcCompat="@drawable/elevator" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/toggleSwitch"
+                    android:layout_alignTop="@+id/toggleSwitch"
+                    android:layout_toLeftOf="@+id/toggleSwitch"
+                    app:srcCompat="@drawable/stairs" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lift"
+                    android:layout_alignBaseline="@+id/toggleSwitch"
+                    android:layout_alignBottom="@+id/toggleSwitch"
+                    android:layout_toRightOf="@+id/imageView"
+                    android:layout_toEndOf="@+id/imageView"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stairs"
+                    android:layout_alignBaseline="@+id/toggleSwitch"
+                    android:layout_alignBottom="@+id/toggleSwitch"
+                    android:layout_toLeftOf="@+id/imageView2"
+                    android:layout_toStartOf="@+id/imageView2"
+                    android:textColor="#000000"
+                    android:textSize="18sp"/>
+            </RelativeLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignEnd="@+id/relativeLayout"
+                android:layout_alignLeft="@+id/relativeLayout"
+                android:layout_alignRight="@+id/relativeLayout"
+                android:layout_alignStart="@+id/relativeLayout"
+                android:layout_below="@+id/relativeLayout"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/directions_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp">
+
+
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

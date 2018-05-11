@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="113dp"
+        android:text="Settings"
+        android:textColor="#000000"
+        android:textSize="40sp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/colorAccentLight"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <Switch
+            android:id="@+id/toggleSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="toggleTakeLift"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/toggleSwitch"
+            android:layout_alignTop="@+id/toggleSwitch"
+            android:layout_toRightOf="@+id/toggleSwitch"
+            app:srcCompat="@drawable/elevator" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/toggleSwitch"
+            android:layout_alignTop="@+id/toggleSwitch"
+            android:layout_toLeftOf="@+id/toggleSwitch"
+            app:srcCompat="@drawable/stairs" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/toggleSwitch"
+            android:layout_alignBottom="@+id/toggleSwitch"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="Lift"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/toggleSwitch"
+            android:layout_alignBottom="@+id/toggleSwitch"
+            android:layout_toLeftOf="@+id/imageView2"
+            android:layout_toStartOf="@+id/imageView2"
+            android:text="Stairs"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</RelativeLayout>

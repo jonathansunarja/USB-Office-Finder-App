@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team23.officefinder.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/app_logo"
+            android:layout_width="94dp"
+            android:layout_height="92dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="28dp"
+            android:src="@drawable/app_logo" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="19dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Office"
+            android:textColor="#000000"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Finder"
+            android:textColor="#000000"
+            android:textSize="40sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topLayout"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorAccentLight"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:text="From:"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/fromText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:background="#ffffff"
+                android:hint="Room/Name"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textSize="24sp" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/inputTypeButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="fromChangeInputType"
+                android:src="@drawable/numpad_icon" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:text="To:"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/toText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:background="#ffffff"
+                android:hint="Room/Name"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:textSize="24sp" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/inputTypeButton2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="toChangeInputType"
+                android:src="@drawable/numpad_icon" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/colorAccentLight"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
+
+            <Switch
+                android:id="@+id/toggleSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text=""
+                android:onClick="toggleTakeLift"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/toggleSwitch"
+                android:layout_alignTop="@+id/toggleSwitch"
+                android:layout_toRightOf="@+id/toggleSwitch"
+                app:srcCompat="@drawable/elevator" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/toggleSwitch"
+                android:layout_alignTop="@+id/toggleSwitch"
+                android:layout_toLeftOf="@+id/toggleSwitch"
+                app:srcCompat="@drawable/stairs" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/toggleSwitch"
+                android:layout_alignBottom="@+id/toggleSwitch"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                android:text="Lift"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/toggleSwitch"
+                android:layout_alignBottom="@+id/toggleSwitch"
+                android:layout_toLeftOf="@+id/imageView2"
+                android:layout_toStartOf="@+id/imageView2"
+                android:text="Stairs"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:drawableLeft="@drawable/search"
+            android:onClick="findRoute"
+            android:paddingLeft="16dp"
+            android:paddingRight="32dp"
+            android:text="Search"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:drawableLeft="@drawable/camera"
+            android:onClick="openCameraView"
+            android:paddingLeft="16dp"
+            android:paddingRight="32dp"
+            android:text="Find with camera"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchLayout"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:onClick="openLecturerList">
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_person_black_48dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Lecturer List"
+                android:textColor="#000000"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:onClick="openMapView">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_map_black_48dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Map"
+                android:textColor="#000000"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:onClick="openSettingsView">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_settings_black_48dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Settings"
+                android:textColor="#000000"
+                android:gravity="center_horizontal"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

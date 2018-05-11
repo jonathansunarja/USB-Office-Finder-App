@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/floorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Floor 1"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-medium"/>
+
+    <ImageView
+        android:id="@+id/mapImage"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/floorLabel"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/floor1"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/label2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/mapImage"
+        android:fontFamily="sans-serif-medium"
+        android:text="Select Floor:"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label2"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/floor1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1"
+            android:onClick="floor1"/>
+
+        <Button
+            android:id="@+id/floor2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2"
+            android:onClick="floor2"/>
+
+        <Button
+            android:id="@+id/floor3Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3"
+            android:onClick="floor3"/>
+
+        <Button
+            android:id="@+id/floor4Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="4"
+            android:onClick="floor4"/>
+
+        <Button
+            android:id="@+id/floor5Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5"
+            android:onClick="floor5"/>
+
+        <Button
+            android:id="@+id/floor6Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="6"
+            android:onClick="floor6" />
+    </LinearLayout>
+</RelativeLayout>

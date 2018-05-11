@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "83343591742",
+    "firebase_url": "https://teamproject-79ae2.firebaseio.com",
+    "project_id": "teamproject-79ae2",
+    "storage_bucket": "teamproject-79ae2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83343591742:android:c8d6a9d070946ef2",
+        "android_client_info": {
+          "package_name": "team23.officefinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83343591742-ao42d16ea163avs0fbohoakcu21t42dh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "team23.officefinder",
+            "certificate_hash": "bae33e23611406cfd78025e562b901c85b5f9a43"
+          }
+        },
+        {
+          "client_id": "83343591742-62se168d72q1dr81fppq06uu561rqkq8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_WK9Zlg8kv0eIkAhCqHiO_4FZvqgp-TA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83343591742-62se168d72q1dr81fppq06uu561rqkq8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
